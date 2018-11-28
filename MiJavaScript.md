@@ -1,8 +1,8 @@
 # Event Listener
 
-## Obervacion 
+## Observación 
 
-> Evitar la ejecución default del botón agregar el siguiente codigo:
+> Evitar la ejecución default del botón agregar el siguiente código:
 > ` e.preventDefault(); ` , donde **e** es el *event* que escucha la función declarada. 
 
  
@@ -28,3 +28,31 @@ function ejecutarBoton(e){
       elemento = e.target.id;
      console.log(elemento);
   };`
+
+---
+## Event Listener - **INPUT**
+
+`const nombre_variable = document.querySelector('** nombre del elemento **');`
+
+>Lo declaramos en una constante para mantener el elemento mas practico.
+>
+>A continuación se muestran los eventos en INPUT "mas utilizados"
+<pre>
+*keydown 
+*keypress
+*keyup
+*focus
+*blur
+*copy
+*cut
+*paste
+</pre>
+
+`nombre_variable.addEventListener('tipo de evento', nombre de la función);`
+
+`function nombre de la función(e){
+     console.log(busqueda.value);
+     console.log(`${e.type}`);
+}`
+
+
