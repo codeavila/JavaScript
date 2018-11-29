@@ -87,3 +87,16 @@ Para eliminar el storage se utiliza:
 `sessionStorage.setItem.removeItem('** key **');`
 
 >>**NOTA**  La diferencia entre ambas es que SessionStorage se borra al momento de cerrar el navegador y localStorage se borra cuando el usuario borra el cache del navegador. Claro ambos se pueden borrar con su respectivo "comando".
+
+
+Mas información 
+[Session Storage](<https://developer.mozilla.org/en-US/docs/Web/API/Storage>)
+
+---
+>**NOTA**  Ejecutar funciones al iniciar "el documento"
+>se utiliza el comando
+>`document.addEventListener('DOMContentLoaded', que es lo que debe hacer);`
+>*La primera parte es el atributo **DOMContentLoaded** el cual hace referencia que cuando todo este listo hara lo que se pase en el siguiente atributo.
+>Para saber mas [DOMContentLoaded](<https://developer.mozilla.org/es/docs/Web/Events/DOMContentLoaded>)
+>>En JQUERY vendria siendo como el  `$( document ).ready()`
+---
