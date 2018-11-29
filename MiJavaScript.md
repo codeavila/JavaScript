@@ -90,7 +90,7 @@ Para eliminar el storage se utiliza:
 
 
 Mas información 
-[Session Storage](<https://developer.mozilla.org/en-US/docs/Web/API/Storage>)
+[Session Storage](https://developer.mozilla.org/es/docs/DOM/Almacenamiento)
 
 ---
 >**NOTA**  Ejecutar funciones al iniciar "el documento"
