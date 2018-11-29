@@ -55,4 +55,35 @@ function ejecutarBoton(e){
      console.log(`${e.type}`);
 }`
 
+---
 
+# Local Storage 
+
+Existen dos formar de guardar información una llamada *Local Storage* y *Session Storage*.
+
+### Escritura
+`localStorage.setItem('** key **','** valor **');`
+
+>**key** seria como el ID y por consecuencia el otro atributo es el valor que tendra.
+
+Para eliminar el storage se utiliza:
+
+`localStorage.removeItem('** key **');`
+
+Eliminar todo
+
+`localStorage.clear();`
+
+
+## Session Storage
+
+### Escritura
+`sessionStorage.setItem('** key **','** valor **');`
+
+>**key** seria como el ID y por consecuencia el otro atributo es el valor que tendra.
+
+Para eliminar el storage se utiliza:
+
+`sessionStorage.setItem.removeItem('** key **');`
+
+>>**NOTA**  La diferencia entre ambas es que SessionStorage se borra al momento de cerrar el navegador y localStorage se borra cuando el usuario borra el cache del navegador. Claro ambos se pueden borrar con su respectivo "comando".
