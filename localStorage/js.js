@@ -30,4 +30,13 @@
           elemento_li.innerHTML = itemRecibido;
           //Una vez que la variable tiene la estructura HTML => li y un valor asignado, se agrega la primer variable que declaramos al inicio que contiene la estructura HTML => UL
           lista_compras.append(elemento_li);
+          //A cada elemento li creado le agregaremos un botón para poder ejecutar el una funcion de borrado
+          //Crearemos un elemento que sea de tipo botón
+          const li_boton = document.createElement('a');
+          li_boton.classList = 'borrar-item';
+          li_boton.innerText = 'X';
+
+          elemento_li.appendChild(li_boton);
+
+
      };
