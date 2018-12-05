@@ -6,17 +6,36 @@
 ### Escritura
 
   `const ciudadano = {
-  nombre : 'Eric'
-  apellido : 'Avila'
+  nombre : 'Eric' ,
+  apellido : 'Avila' ,
   edad : 28
   }`
 
 >Normalmente un objeto se declara como si fuera una variable ya que lo que hará la diferencia serian los "parámetros" que le agregamos.
 
+Se puede tener **functions** dentro de los **Objetos**.
+
+
+### Escritura
+
+`const ciudadano = {
+nombre : 'Eric' ,
+apellido : 'Avila' ,
+edad : 28 ,
+esMayorDeEdad : function(){
+  let respuesta;
+  if(this.edad >= 18){ respuesta = 'Si es mayor de edad.' }
+  else { respuesta = 'No es mayor de edad.' }
+  return respuesta;
+  }
+}
+`
+
 ## Observación
 
 >Un detalle es que en los parámetros que le agregamos a nuestro objeto es que los elementos de tipo **STRING** se utiliza la **Comilla simple** y a los que son **"Numeros"** **(Float,Int,Double,Etc.)** solo se escriben tal cual, ya que automáticamente se identifica cual parámetro es de que tipo, así que hay que tener en cuenta que al momento de querer utilizar alguno de los parámetros de nuestro **Objeto** debemos respetar el tipo de variable que es.
 
+>**NOTA** se utiliza la palabra reservada `this` debido a que se hace referencia a un elemento del **Objeto**, ademas se cada "parámetro" es separado por una "coma".
 
 # Event Listener
 
