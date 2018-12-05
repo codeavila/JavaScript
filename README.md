@@ -1,3 +1,23 @@
+# Mi Manual de JavaScript 
+#### by Dev-EUAB
+
+# Objetos
+
+### Escritura
+
+  `const ciudadano = {
+  nombre : 'Eric'
+  apellido : 'Avila'
+  edad : 28
+  }`
+
+>Normalmente un objeto se declara como si fuera una variable ya que lo que hará la diferencia serian los "parámetros" que le agregamos.
+
+## Observación
+
+>Un detalle es que en los parámetros que le agregamos a nuestro objeto es que los elementos de tipo **STRING** se utiliza la **Comilla simple** y a los que son **"Numeros"** **(Float,Int,Double,Etc.)** solo se escriben tal cual, ya que automáticamente se identifica cual parámetro es de que tipo, así que hay que tener en cuenta que al momento de querer utilizar alguno de los parámetros de nuestro **Objeto** debemos respetar el tipo de variable que es.
+
+
 # Event Listener
 
 ## Observación 
