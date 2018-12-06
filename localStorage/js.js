@@ -134,3 +134,15 @@
           });
 
      }
+
+     function ciudadano(nombre,apellido,edad){
+          this.nombre = nombre,
+          this.appelido = apellido,
+          this.edad = edad,
+          esMayorDeEdad: function(){
+               let respuesta;
+               if(this.edad >= 18){ respuesta = 'Si es mayor de edad.' }
+               else { respuesta = 'No es mayor de edad.' }
+               return respuesta;
+          }
+     }

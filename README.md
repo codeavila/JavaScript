@@ -37,6 +37,28 @@ esMayorDeEdad : function(){
 
 >**NOTA** se utiliza la palabra reservada `this` debido a que se hace referencia a un elemento del **Objeto**, ademas se cada "parámetro" es separado por una "coma".
 
+Hay que tener en cuenta que un **Objeto** se le pueden asignar parametros
+
+### Escritura
+
+`function ciudadano(nombre,apellido,edad){
+          this.nombre = nombre ,
+          this.appelido = apellido ,
+          this.edad = edad ,
+          this.esMayorDeEdad = function(){
+               let respuesta;
+               if(this.edad >= 18){ respuesta = 'Si es mayor de edad.' }
+               else { respuesta = 'No es mayor de edad.' }
+               return respuesta;
+          };
+     }`
+
+Y se utiliza de la siguiente manera
+
+`const ciudadanoA = new ciudadano('Eric','Avila',28);`
+
+>Se crea una variable del tipo de objeto -ciudadano de esta manera la variable tendrá la estructura del objeto y se pueden agregar los atributos que le corresponde, **Hay que respetar los tipo de datos que se declaran dentro del objeto**.
+
 # Event Listener
 
 ## Observación 
