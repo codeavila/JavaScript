@@ -1,8 +1,27 @@
 # Mi Manual de JavaScript 
 #### by Dev-EUAB
 
-# Condiciones IF,ELSE,ELSE IF
+# Condiciones IF,ELSE,ELSE IF y Operadores Lógicos/Relacionales
 ## IF
+
+>Compara si ambas variables son iguales y nos arroja un mensaje en caso de que sea cierto, y en caso de que no (**else**) arroja un mensaje de que son diferentes.
+
+>Un uso común de las **Condiciones** es para *Comparar* dos o mas variables.
+>Para estos casos se utilizan **Los Operadores Relacionales**.
+>
+>Los cuales son:
+
+|Operador|Nombre|Ejemplo|Descripcion|
+|---|---|---|---| 
+|< 	|menor que| 	a<b| 	a es menor que b|
+|> 	|mayor que| 	a>b| 	a es mayor que b|
+|== |	igual a| 	a==b| 	a es igual a b|
+|!= |	no igual a |	a!=b| 	a no es igual a b|
+|<= |	menor que o igual a| 	a<=5| 	a es menor que o igual a b|
+|>= |	mayor que o igual a| 	a>=b| 	a es menor que o igual a b|
+
+>Estos operadores se ponen en la estructura del las condicionales dependiendo de lo que necesitemos en nuestro caso **`==`** 
+
 
 `const variableA = 1;`
 `const variableB = 1;`
@@ -34,6 +53,9 @@ cons variable_Objeto_Numero = new Number(20)
 }`
 
 >>>podemos observar que ambas variables tiene el valor de **20** pero la diferencia es que uno es un **Objeto de tipo Numero** y el otro es una **variable numero**, así que nunca serán iguales aunque tengan el mismo valor debido a que son dos tipos diferentes.  
+
+Sabiendo lo anterior podemos utilizar tambien **Los Operadores Logicos**
+
 
 
 # Objetos
