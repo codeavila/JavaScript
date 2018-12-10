@@ -1,6 +1,41 @@
 # Mi Manual de JavaScript 
 #### by Dev-EUAB
 
+# Condiciones IF,ELSE,ELSE IF
+## IF
+
+`const variableA = 1;`
+`const variableB = 1;`
+
+### `==` Operador de igualdad
+
+`if(variableA == variableB){
+  console.log('Las variables son iguales')
+}else{
+console.log('Las variables son diferentes)
+}`
+
+### `===` Operador de igualdad estricto
+
+>¿Por que estricto?
+>>Se le hace llamar así debido a que ese operador no solamente compara el valor de la variable si no también el tipo de variable y compara ambas cosas.
+
+###Ejemplo
+
+`
+const variable_Numero = 1;
+cons variable_Objeto_Numero = new Number(20) 
+`
+
+`if(variable_Numero === variable_Objeto_Numero){
+  console.log('Las variables son iguales')
+}else{
+ console.log('Las variables son diferentes)
+}`
+
+>>>podemos observar que ambas variables tiene el valor de **20** pero la diferencia es que uno es un **Objeto de tipo Numero** y el otro es una **variable numero**, así que nunca serán iguales aunque tengan el mismo valor debido a que son dos tipos diferentes.  
+
+
 # Objetos
 
 ### Escritura
