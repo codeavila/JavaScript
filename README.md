@@ -31,7 +31,7 @@ const variableB = 1;
 if(variableA == variableB){
   console.log('Las variables son iguales')
 }else{
-console.log('Las variables son diferentes)
+console.log('Las variables son diferentes')
 }
 ```
 
