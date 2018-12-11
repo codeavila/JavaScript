@@ -60,16 +60,19 @@ Sabiendo lo anterior podemos utilizar tambien **Los Operadores Logicos**
 >Operadores Logicos
 
 |Operador|Nombre|Descripcion|
-|---|---|---|---| 
-|`&&`	|  "Y" |  "lo anterior Y esto"   |   
-| `||` 	|  "Ó" | "lo anterior Ó esto"  |  
- 
+|---|---|---|
+|`&&`|"Y"| "lo anterior Y esto"|   
+|`||`|"Ó"|"lo anterior Ó esto"|  
+|`!`|"Negacion"|"niega lo siguiente"|  
 
 ># Operador `&&` "Y" "AND"
 >>>El operador AND menciona que ambos casos deben de ser verdaderos para seguir adelante.
 
 ># Operador `||` "O" "OR"
 >>>El operador OR menciona que mientras haya un verdadero seguir adelante.
+
+># Operador `!` "Negación" "NOT"
+>>>El operador NOT tiene como función negar la declaración siguiente, si una evaluacion será TRUE este lo niega y lo volvera FALSE y de la misma manera a la inversa.
 
 ># NOTA
 >>Un IF simpre su estructura evalua TRUE, que se quiere decir con eso que al momento de escribir `if(variable)` la `variable` se estara evaluando para que sea `true` y en caso de que no sea `true` entrara la fase de `else{}` el cual es cuando no se cumple el `true`.
@@ -114,8 +117,49 @@ if(varA == varB){
 >NOTA
 >Se pueden agregar tantos `ELSE IF` como sean necesario pero, siempre y cuando sea seguido de un `IF`.
 
-  
+```
+# NOTA
+Si tu intencion es evaluar una variable para retornar "algo" una buena practica es utilizar  SWTICH
+```
 
+># SWITCH
+>Su función es evaluar una variable en diferentes escenarios ya que pueden poner las diferentes situaciones en las cuales puede ser verdadera y retornar o hacer alguna función especifica.
+
+
+### Escritura
+```js
+  const calificacion = 6;
+```
+
+```js
+  switch(varA){
+    case 5: 
+      console.log("El Alumno no excento la materia");
+      break;
+    case 6: 
+      console.log("El Alumno excento la materia");
+      break;
+    case 7: 
+      console.log("El Alumno excento la materia");
+      break;
+    case 8: 
+      console.log("El Alumno excento la materia");
+      break;
+    case 9: 
+      console.log("El Alumno excento la materia");
+      break;
+    case 10: 
+      console.log("El Alumno excento la materia");
+      break;
+    default: 
+      console.log('No se presento el Alumno en la  evaluacion');
+     break;
+  }
+```
+
+>>>El Switch se compone de una estructura donde hay casos (`case`) donde se declara el valor con el cual sera evaluado la variable `case (variable para comparar) ` seguido de lo que sucedera, tanto puede ser una `function nombre_de_la_funcion (){}`, una operacion aritmetica `return varA + 10;` u la entrega de un mensaje como en el ejemplo anterior, y al momento de hacer lo que debe este se terminara gracias al `break`, en caso de que ningudo de los  `case` coincida con el valor a evaluar se agrega un `default` y hara lo que se le indique.
+
+---
 
 # Objetos
 
