@@ -68,11 +68,6 @@ Sabiendo lo anterior podemos utilizar tambien **Los Operadores Logicos**
 */
 ```
 
-|Operador|Nombre|Descripcion|
-|---|---|---|
-| `&&` |"Y"| "lo anterior Y esto" |   
-| `'||'` | "'Ó'" | "lo anterior Ó esto" |  
-| `!` | "Negacion" | "niega lo siguiente" |  
 
 ># Operador `&&` "Y" "AND"
 >>>El operador AND menciona que ambos casos deben de ser verdaderos para seguir adelante.
