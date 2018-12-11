@@ -2,8 +2,7 @@
 #### by Dev-EUAB
 
 # Condiciones IF,ELSE,ELSE IF y Operadores Lógicos/Relacionales
-## IF
-
+>## IF / ELSE
 >Compara si ambas variables son iguales y nos arroja un mensaje en caso de que sea cierto, y en caso de que no (**else**) arroja un mensaje de que son diferentes.
 
 >Un uso común de las **Condiciones** es para *Comparar* dos o mas variables.
@@ -58,6 +57,23 @@ if(variable_Numero === variable_Objeto_Numero){
 
 Sabiendo lo anterior podemos utilizar tambien **Los Operadores Logicos**
 
+>Operadores Logicos
+
+|Operador|Nombre|Descripcion|
+|---|---|---|---| 
+|`&&`	|  "Y" |  "lo anterior Y esto"   |   
+| `||` 	|  "Ó" | "lo anterior Ó esto"  |  
+ 
+
+># Operador `&&` "Y" "AND"
+>>>El operador AND menciona que ambos casos deben de ser verdaderos para seguir adelante.
+
+># Operador `||` "O" "OR"
+>>>El operador OR menciona que mientras haya un verdadero seguir adelante.
+
+># NOTA
+>>Un IF simpre su estructura evalua TRUE, que se quiere decir con eso que al momento de escribir `if(variable)` la `variable` se estara evaluando para que sea `true` y en caso de que no sea `true` entrara la fase de `else{}` el cual es cuando no se cumple el `true`.
+
 ### Escritura
 ```js
   const varA = 20; 
@@ -67,12 +83,37 @@ Sabiendo lo anterior podemos utilizar tambien **Los Operadores Logicos**
   const varE = 15; 
 ```
 ```js
-  if( (varA === varB) && (varD === varE)){ 
+  if( (varA === varB) && (varD === varE) ){ 
     console.log('Son iguales');
-  }else{`
-  console.log('Son diferentes');
+  }else{
+    console.log('Son diferentes');
   }
+  //El mensaje que se mostrara sera -Son diferente, esto es porque la primera parte se cumple varA y varB son iguales, así que pasa a la siguiente comparación la cual no se cumple  varD y varE no son igual sabiendo eso compara ambos resultados esperando 
 ```
+
+># ELSE IF
+>Es una condicional extra la cual surge despues e un `IF` siempre y cuando el `IF` sea de resulta `FALSE` se ejecuta la siguiente condicional sin pasar por "si no sucede, esto" , por mencionarlo de otra forma es algo como - "Si no, sucede lo anterior evalua lo siguiente".
+
+### Escritura
+```js
+  const varA = 'Hola';
+  const varB = 'Adios';
+
+  const varC = 'Hola';
+```
+
+```js
+if(varA == varB){
+  console.log('Son iguales varA y varB');
+}else if( varA == varC){
+  console.log('Son iguales varA y varC');
+}
+
+//La variable sera evaluada hasta que encuentre un estado TRUE y ahi se detendra.
+```
+>NOTA
+>Se pueden agregar tantos `ELSE IF` como sean necesario pero, siempre y cuando sea seguido de un `IF`.
+
   
 
 
