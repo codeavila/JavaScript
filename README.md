@@ -39,7 +39,7 @@ console.log('Las variables son diferentes')
 >¿Por que estricto?
 >>Se le hace llamar así debido a que ese operador no solamente compara el valor de la variable si no también el tipo de variable y compara ambas cosas.
 
-###Ejemplo
+### Ejemplo
 
 ```js
 const variable_Numero = 1;
@@ -62,7 +62,7 @@ Sabiendo lo anterior podemos utilizar tambien **Los Operadores Logicos**
 |Operador|Nombre|Descripcion|
 |---|---|---|
 |`&&`|"Y"| "lo anterior Y esto"|   
-|`||`|"Ó"|"lo anterior Ó esto"|  
+| `||` |"Ó"|"lo anterior Ó esto"|  
 |`!`|"Negacion"|"niega lo siguiente"|  
 
 ># Operador `&&` "Y" "AND"
@@ -77,7 +77,7 @@ Sabiendo lo anterior podemos utilizar tambien **Los Operadores Logicos**
 ># NOTA
 >>Un IF simpre su estructura evalua TRUE, que se quiere decir con eso que al momento de escribir `if(variable)` la `variable` se estara evaluando para que sea `true` y en caso de que no sea `true` entrara la fase de `else{}` el cual es cuando no se cumple el `true`.
 
-### Escritura
+### Ejemplo
 ```js
   const varA = 20; 
   const varB = 20; 
@@ -97,7 +97,7 @@ Sabiendo lo anterior podemos utilizar tambien **Los Operadores Logicos**
 ># ELSE IF
 >Es una condicional extra la cual surge despues e un `IF` siempre y cuando el `IF` sea de resulta `FALSE` se ejecuta la siguiente condicional sin pasar por "si no sucede, esto" , por mencionarlo de otra forma es algo como - "Si no, sucede lo anterior evalua lo siguiente".
 
-### Escritura
+### Ejemplo
 ```js
   const varA = 'Hola';
   const varB = 'Adios';
@@ -126,7 +126,7 @@ Si tu intencion es evaluar una variable para retornar "algo" una buena practica 
 >Su función es evaluar una variable en diferentes escenarios ya que pueden poner las diferentes situaciones en las cuales puede ser verdadera y retornar o hacer alguna función especifica.
 
 
-### Escritura
+### Ejemplo
 ```js
   const calificacion = 6;
 ```
@@ -163,7 +163,7 @@ Si tu intencion es evaluar una variable para retornar "algo" una buena practica 
 
 # Objetos
 
-### Escritura
+### Ejemplo
 ```js
   const ciudadano = {
   nombre : 'Eric' ,
@@ -177,7 +177,7 @@ Si tu intencion es evaluar una variable para retornar "algo" una buena practica 
 Se puede tener **functions** dentro de los **Objetos**.
 
 
-### Escritura
+### Ejemplo
 
 ```js
 const ciudadano = {
@@ -201,7 +201,7 @@ esMayorDeEdad : function(){
 
 Hay que tener en cuenta que un **Objeto** se le pueden asignar parametros
 
-### Escritura
+### Ejemplo                      
 
 ```js
 function ciudadano(nombre,apellido,edad){
