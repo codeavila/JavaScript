@@ -349,3 +349,26 @@ Mas información
 >Para saber mas [DOMContentLoaded](<https://developer.mozilla.org/es/docs/Web/Events/DOMContentLoaded>)
 >>En JQUERY vendria siendo como el  `$( document ).ready()`
 ---
+
+---
+
+# Prototypes
+
+Prototypes son propiedades de un elemento de JavaScript dependiendo del tipo que sean, estas estan predefinidas ó pueden ser creadas por el usuario.
+
+Mas información
+[Prototypes](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Function/prototype)
+
+>En la CONSOLA del Navegador de tu preferencia puedes ver los `prototypes` que tiene asignado el elemento que estes revisando, ya que como te menciono ya llevan predefinidos.
+
+```js
+//Declaramos un arreglo vacio 
+const arreglo = [];
+//Imprimos el arreglo
+console.log(arreglo);
+// Desglozamos el elemento utilizando la flecha y veremos todas sus propiedades tales como sus metodos que puede utilizar siendo un ´Array´.
+```
+
+![Prototype](prototypes/prototype.png) 
+
+>Pero como indicamos podemos crear nuevos metodos, como se muestra a continuación.
