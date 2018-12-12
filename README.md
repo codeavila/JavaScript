@@ -372,3 +372,57 @@ console.log(arreglo);
 ![Prototype](prototypes/prototype.png) 
 
 >Pero como indicamos podemos crear nuevos metodos, como se muestra a continuación.
+
+### Ejemplo
+
+```js
+  function Casa(calle,numero){
+    this.calle = calle;
+    this.numero = numero;
+  }
+
+  const miCasa = new Casa('San Pedro',220);
+
+  console.log(miCasa);
+```
+### Consola (Google Chrome)
+
+  ![Console_Result_1](prototypes/P_1.png) 
+
+
+># Beneficios del prototype
+>> Sabemos que podemos tener `function` y tener varias funciones dentro de ellas mismas de las cuales podemos crear variables con sus propiedades `objects` del tipo de la `function`,  pero que tal si necesitaramos alguna de las funciones que estan dentro de los objetos, darle mantenimiento a nuestro codigo.
+
+```js
+  function Casa(calle,numero,casa){
+    this.calle = calle;
+    this.numero = numero;
+    this.casa = casa;
+
+    this.tipoCasa = function(){
+      
+      let tipo;
+      if(this.casa = 1){
+          tipo = 'Unifamiliar';
+      } else if(this.casa = 2){
+          tipo = 'Duplex';
+      }else{
+          tipo = 'Departamento';
+      }
+
+    }
+
+  }
+
+  const miCasa = new Casa('San Pedro',220);
+
+  console.log(miCasa);
+```
+
+### Consola (Google Chrome)
+
+  ![Console_Result_2](prototypes/P_2.png) 
+
+>Si buen podemos observar que ahora que se integro una función como se muestra en cosola, nosotros no podriamos utilziarla en otro objeto de otro tipo si así lo requirieramos, por lo tanto tenemos que separar nuestro codigo y "unirlo" de alguna manera para que este disponible en otras funciones.
+
+># **"Un objeto hereda sus funciones del `prototype`"**.
