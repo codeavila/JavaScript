@@ -426,3 +426,33 @@ console.log(arreglo);
 >Si buen podemos observar que ahora que se integro una función como se muestra en cosola, nosotros no podriamos utilziarla en otro objeto de otro tipo si así lo requirieramos, por lo tanto tenemos que separar nuestro codigo y "unirlo" de alguna manera para que este disponible en otras funciones.
 
 ># **"Un objeto hereda sus funciones del `prototype`"**.
+
+```js
+function Casa(calle,numero){
+    this.calle = calle;
+    this.numero = numero;
+  }
+
+  Casa.prototype.tipoCasa = function(casa){
+      this.casa = casa;
+      let tipo;
+      if(this.casa = 1){
+          tipo = 'Unifamiliar';
+      } else if(this.casa = 2){
+          tipo = 'Duplex';
+      }else{
+          tipo = 'Departamento';
+      }
+
+    }
+
+  const miCasa = new Casa('San Pedro',220);
+
+  console.log(miCasa);
+  ```
+
+  ### Consola (Google Chrome)
+
+  ![Console_Result_2](prototypes/P_3.png) 
+
+  >En la imagen podemos observar que ya nuestra `function` es ahora parte del `__proto__` esto quiere decir que ya es parte de las funciones de nuestro objeto, vemos tambien que nuestro codigo se ve mejor.
