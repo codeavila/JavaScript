@@ -394,24 +394,19 @@ console.log(arreglo);
 >> Sabemos que podemos tener `function` y tener varias funciones dentro de ellas mismas de las cuales podemos crear variables con sus propiedades `objects` del tipo de la `function`,  pero que tal si necesitaramos alguna de las funciones que estan dentro de los objetos, darle mantenimiento a nuestro codigo.
 
 ```js
-  function Casa(calle,numero,casa){
+  function Casa(calle,numero){
     this.calle = calle;
     this.numero = numero;
-    this.casa = casa;
 
-    this.tipoCasa = function(){
-      
-      let tipo;
-      if(this.casa = 1){
-          tipo = 'Unifamiliar';
-      } else if(this.casa = 2){
-          tipo = 'Duplex';
-      }else{
-          tipo = 'Departamento';
-      }
-
+    this.tipoCasa = function(casa){
+       if(casa === 1){
+           return 'Unifamiliar';
+       } else if(casa === 2){
+           return 'Duplex';
+       }else{
+           return 'Departamento';
+       }
     }
-
   }
 
   const miCasa = new Casa('San Pedro',220);
@@ -428,22 +423,19 @@ console.log(arreglo);
 ># **"Un objeto hereda sus funciones del `prototype`"**.
 
 ```js
-function Casa(calle,numero){
+function Casa(calle,numero,casa){
     this.calle = calle;
     this.numero = numero;
   }
 
-  Casa.prototype.tipoCasa = function(casa){
-      this.casa = casa;
-      let tipo;
-      if(this.casa = 1){
-          tipo = 'Unifamiliar';
-      } else if(this.casa = 2){
-          tipo = 'Duplex';
-      }else{
-          tipo = 'Departamento';
-      }
-
+  Casa.prototype.tipoCasa = function(casa){      
+       if(casa === 1){
+           return 'Unifamiliar';
+       } else if(casa === 2){
+           return 'Duplex';
+       }else{
+           return 'Departamento';
+       }
     }
 
   const miCasa = new Casa('San Pedro',220);
@@ -453,6 +445,71 @@ function Casa(calle,numero){
 
   ### Consola (Google Chrome)
 
-  ![Console_Result_2](prototypes/P_3.png) 
+  ![Console_Result_3](prototypes/P_3.png) 
 
-  >En la imagen podemos observar que ya nuestra `function` es ahora parte del `__proto__` esto quiere decir que ya es parte de las funciones de nuestro objeto, vemos tambien que nuestro codigo se ve mejor.
+  >En la imagen podemos observar que ya nuestra `function` es ahora parte del `__proto__` esto quiere decir que ya es parte de las funciones de nuestro objeto.
+
+  ![Console_Result_4](prototypes/P_4.png) 
+  
+  >Ahora invocamos el `function` pasando el parametro de acuerdo a las opciones y obtendremos el resultado.
+
+  ```js
+function Familia(numeroDeIntegrantes,mascotas){
+    this.numeroDeIntegrantes = numeroDeIntegrantes;
+    this.mascotas = mascotas;
+  }
+
+  Familia.prototype.tipoCasa = function(casa){
+       if(casa === 1){
+           return 'Unifamiliar';
+       } else if(casa === 2){
+           return 'Duplex';
+       }else{
+           return 'Departamento';
+       }
+    }
+
+  const familia = new Familia('5 Integrantes',2);
+
+  console.log(familia);
+  ```
+
+  ![Console_Result_4](prototypes/P_4.1.png) 
+
+  >Ahora que tenemos la `function` en el `__proto__` podemos hacerlo parte de otra función.
+
+  
+  ># Herencia
+  >>Digamos que necesitamos utilizar las variables de nuestra `function` llamada *Casa* en nuestra nueva `function` llamada *Familia*, para esto haremos lo siguiente
+
+  ```js
+    function Casa(calle,numero){
+      this.calle = calle;
+      this.numero = numero;
+    }
+
+    Casa.prototype.tipoCasa = function(casa){
+       if(casa === 1){
+           return 'Unifamiliar';
+       } else if(casa === 2){
+           return 'Duplex';
+       }else{
+           return 'Departamento';
+       }
+    }
+
+    function Familia(calle,numero,numeroDeIntegrantes,mascotas){
+      Casa.call(this,calle,numero);
+      this.numeroDeIntegrantes = numeroDeIntegrantes;
+      this.mascotas = mascotas;
+    }
+
+
+  
+
+  const familia = new Familia('San Pedro',19,'5 Integrantes',2);
+
+  console.log(familia);
+  ```
+
+   ![Console_Result_4](prototypes/P_5.png) 
