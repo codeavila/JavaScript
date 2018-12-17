@@ -566,3 +566,41 @@ function Familia(numeroDeIntegrantes,mascotas){
 ![Console_Result_8](prototypes/P_8.png) 
 
 >Ahora ya es parte de nuestra `function` *Familia* y todos los objetos que crearemos tendran en su `__proto__` la `function` **tipoCasa**.
+
+> # En realidad esto es funcional dependiendo de lo que querramos implementar en nuestras aplicaciones, pero personalmente estamos haciendo un tipo de pseudo `clases`.
+
+## Object.Create
+
+>Esta seria la forma corta para hacer lo anterior gracias a `Object.create()`
+
+```js
+  const Casa ={
+
+    nombreDelTitular : function() {
+      return `El nombre del titular es ${this.nombre}`
+    } ,
+
+    tipoDeCasa : function(casa){
+      if(casa === 1){
+           return 'Unifamiliar';
+       } else if(casa === 2){
+           return 'Duplex';
+       }else{
+           return 'Departamento';
+       }
+    }
+  }
+
+  const FamEUAB = Object.create(Casa);
+  FamEUAB.nombre = 'Eric Avila';
+  FamEUAB.casa = 2;
+
+  console.log(FamEUAB.nombreDelTitular());
+
+  console.log(FamEUAB.tipoDeCasa(2));
+```
+>Observemos `__proto__` de nuestro objeto *FamEUAB*
+![Console_Result_8](prototypes/P_10.png) 
+
+>Y si mandamos a llamar a alguno vemos que funciona
+![Console_Result_8](prototypes/P_10.1.png) 
