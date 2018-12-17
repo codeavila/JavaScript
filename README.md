@@ -474,7 +474,7 @@ function Familia(numeroDeIntegrantes,mascotas){
   console.log(familia);
   ```
 
-  ![Console_Result_4](prototypes/P_4.1.png) 
+  ![Console_Result_4.1](prototypes/P_4.1.png) 
 
   >Ahora que tenemos la `function` en el `__proto__` podemos hacerlo parte de otra función.
 
@@ -511,5 +511,58 @@ function Familia(numeroDeIntegrantes,mascotas){
 
   console.log(familia);
   ```
+   ### Consola (Google Chrome)
 
-   ![Console_Result_4](prototypes/P_5.png) 
+   ![Console_Result_5](prototypes/P_5.png) 
+
+   Como podemos observar todo funciona como era de esperarse y como *"heredamos"* podemos entender que podrias accesar a la `function` del `__prototype__` que hemos declarado. 
+
+   ![Console_Result_6](prototypes/P_6.png) 
+
+   ```js
+    Uncaught TypeError: familia.tipoCasa is not a function
+    at <anonymous>:1:9
+
+    /*
+      Este error nos indica que no es una función a pesar de haber "heredado" "todo" lo que compone a la funcion 'Casa'.
+
+      Podemos revisar el __proto__ del objeto 'familia' y veremos que no existe en el.
+
+      Por lo tanto no heredados su __prototype__
+    */
+   ```
+>Para heredar el `__prototype__` `realizaremos lo siguiente
+
+```js
+    function Casa(calle,numero){
+      this.calle = calle;
+      this.numero = numero;
+    }
+
+    Casa.prototype.tipoCasa = function(casa){
+       if(casa === 1){
+           return 'Unifamiliar';
+       } else if(casa === 2){
+           return 'Duplex';
+       }else{
+           return 'Departamento';
+       }
+    }
+
+    function Familia(calle,numero,numeroDeIntegrantes,mascotas){
+      Casa.call(this,calle,numero);
+      this.numeroDeIntegrantes = numeroDeIntegrantes;
+      this.mascotas = mascotas;
+    }
+
+  /* Integrar el __proto__ al objeto*/
+  Familia.prototype = Object.create(Casa.prototype);
+
+  const familia = new Familia('San Pedro',19,'5 Integrantes',2);
+
+  console.log(familia);
+  console.log(familia.tipoCasa(1));
+  ```
+![Console_Result_8](prototypes/P_8.png) 
+
+>Ahora ya es parte de nuestra `function` *Familia* y todos los objetos que crearemos tendran en su `__proto__` la `function` **tipoCasa**.
