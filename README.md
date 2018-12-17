@@ -600,7 +600,75 @@ function Familia(numeroDeIntegrantes,mascotas){
   console.log(FamEUAB.tipoDeCasa(2));
 ```
 >Observemos `__proto__` de nuestro objeto *FamEUAB*
-![Console_Result_8](prototypes/P_10.png) 
+![Console_Result_10](prototypes/P_10.png) 
 
 >Y si mandamos a llamar a alguno vemos que funciona
-![Console_Result_8](prototypes/P_10.1.png) 
+![Console_Result_10.1](prototypes/P_10.1.png) 
+
+---
+
+# Clases
+
+>Para declarar una `Clase` la estructura es de la siguiente manera
+
+### Escritura
+
+  ```js
+    class 'nombre_de_la_clase'{
+      constructor(var_a,var_b,'etc.')
+        {
+          this.var_a = 'variable';
+          .
+          .
+          .
+          this.nombre_variable = 'variable';
+        }    
+
+        metodo_nombre(){
+          return algo;
+        }
+
+        metodo_parametros(variable_a,variable_b){
+          /*
+            Aqui declaramos lo que va hacer este metodo que es parte de la clase que acabamos de declarar.
+          */
+        }
+        
+    }
+  ```
+
+### Ejemplo
+
+  ```js
+    class Casa {
+      constructor(calle,numero,numeroDeIntegrantes,mascotas,casa){
+          this.calle = calle;
+          this.numero = numero
+          this.numeroDeIntegrantes = numeroDeIntegrantes; 
+          this.mascotas = mascotas;
+          this.casa = casa;
+      }
+
+      acercaFamilia(){
+        return `La calle es ${calle} y el numero es ${numero}. El numero de integrantes en la familia es ${numeroDeIntegrantes} y tienen ${mascotas} mascotas.`
+      }
+
+      tipoCasa(){
+        if(casa === 1){
+           return 'Unifamiliar';
+        } else if(casa === 2){
+           return 'Duplex';
+        }else{
+           return 'Departamento';
+        }
+      }
+    }
+
+    const familia_A = new Casa('San Pedro',19, 3, 1, 3)
+
+    console.log(familia_A)
+  ```
+
+![Console_Result_11](prototypes/P_11.png) 
+
+![Console_Result_12](prototypes/P_12.png) 
