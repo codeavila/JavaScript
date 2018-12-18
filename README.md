@@ -618,9 +618,11 @@ function Familia(numeroDeIntegrantes,mascotas){
       constructor(var_a,var_b,'etc.')
         {
           this.var_a = 'variable';
+         /*
           .
+          . Variables que se necesiten
           .
-          .
+          */
           this.nombre_variable = 'variable';
         }    
 
@@ -650,13 +652,13 @@ function Familia(numeroDeIntegrantes,mascotas){
       }
 
       acercaFamilia(){
-        return `La calle es ${calle} y el numero es ${numero}. El numero de integrantes en la familia es ${numeroDeIntegrantes} y tienen ${mascotas} mascotas.`
+        return `La calle es ${this.calle} y el numero es ${this.numero}. El numero de integrantes en la familia es ${this.numeroDeIntegrantes} y tienen ${this.mascotas} mascotas.`
       }
 
-      tipoCasa(){
-        if(casa === 1){
+      tipoCasa(casa){
+        if(this.casa === 1){
            return 'Unifamiliar';
-        } else if(casa === 2){
+        } else if(this.casa === 2){
            return 'Duplex';
         }else{
            return 'Departamento';
@@ -668,7 +670,55 @@ function Familia(numeroDeIntegrantes,mascotas){
 
     console.log(familia_A)
   ```
+ ### Consola (Google Chrome)
 
 ![Console_Result_11](prototypes/P_11.png) 
 
+>Llamando a las funciones
+![Console_Result_11.5](prototypes/P_11.5.png) 
 ![Console_Result_12](prototypes/P_12.png) 
+
+>### Class / Extends
+> Utilizar el extendes despues de declarar una clase esta "extendera" sus atributos tomando la clase que le indiques
+
+### Ejemplo
+
+```js
+class Casa {
+      constructor(calle,numero,numeroDeIntegrantes,mascotas,casa){
+          this.calle = calle;
+          this.numero = numero
+          this.numeroDeIntegrantes = numeroDeIntegrantes; 
+          this.mascotas = mascotas;
+          this.casa = casa;
+      }
+
+      acercaFamilia(){
+        return `La calle es ${this.calle} y el numero es ${this.numero}. El numero de integrantes en la familia es ${this.numeroDeIntegrantes} y tienen ${this.mascotas} mascotas.`
+      }
+
+      tipoCasa(casa){
+        if(this.casa === 1){
+           return 'Unifamiliar';
+        } else if(this.casa === 2){
+           return 'Duplex';
+        }else{
+           return 'Departamento';
+        }
+      }
+    }
+
+    class Constructora extends Casa{
+        constructor(nombreConstructora,tipoDeCredito){
+        /* Se "llaman" las variables del "padre" */
+        super(calle,numero,numeroDeIntegrantes,mascotas,casa);
+
+        this.nombreConstructora = nombreConstructora;
+        this.tipoDeCredito = tipoDeCredito;
+      }
+    }
+
+    const contructora_A = new Constructora('San Pedro',19, 3, 1, 3,'BestHouse','Infonavit');
+
+    console.log(constructor_A);
+```
