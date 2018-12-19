@@ -722,3 +722,30 @@ class Casa {
 
     console.log(constructor_A);
 ```
+
+---
+# JavaScript y AJAX
+
+>Una de las grandes posibilidades de JavaScript o prestaciones es poder utilizar AJAX para el control de información. Veremos como se utiliza de manera nativa ya que en **JQUERY** ya estan los metodos encapsulados para utilizarlos u en otras librerias/frameworks.
+
+> **Pero en mi opinion personal es mejor saber lo nativo para tener claro el fundamento y así poder valorar si se utiliza lo nativo o algo "diferente".**
+
+### Escritura
+```js
+  /*Una de las normativas en los ejemplos que uno encuentre en internet de como utilizar AJAX en JavaScript es la declaración del OBJETO < XMLHttpRequest > es declarar el nombre de la variable de la siguiente manera */
+
+  const xhr = new XMLHttpRequest();
+
+  /* XMLHttpRequest es un objeto de JavaScript el cual ya es un estandar de la W3C cuya función es obtener información de una URL sin tener que recargar la pagina completa. */
+
+
+//Abrir la conexión
+
+  xhr.open('tipoDeRequest','URL',true);
+
+
+
+
+```
+
+
