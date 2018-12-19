@@ -741,7 +741,37 @@ class Casa {
 
 //Abrir la conexión
 
-  xhr.open('tipoDeRequest','URL',true);
+  xhr.open('tipoDeRequest','URL',true/false);
+
+  /*
+  ¿Tipo de Request?
+  Le hacemos llamar 'Request' a la acción que vamos a realizar.
+  [GET] => Lectura de datos
+  [POST] => Envio de datos nuevos
+  [PUT] => Actualuzar dato(s)
+  [DELETE] => Eliminar dato(s)
+  */
+
+  /* 
+  ¿URL?
+  Es la dirección a la cual se hara el Request, puede ser un documento hasta una dirección web.
+  */
+
+  /*
+  ¿true/false?
+  JavaScript trabaja de una manera 'Asincrona' ya que puede procesar y obtener una respuesta sin tener la necesidad de "parar" mientras se procesa la ejecución de alguna función.
+
+  Cuando el valor es  => TRUE  [Asincrona]
+  Esto quiere decir que se podra trabajar sin ser interrumpidos aunque aun no se tenga la respuesta o el resultado del proceso.
+
+  En caso de que sea => FALSE [Sincrona]
+  En esta opción es la menos usada y la menos adecuada ya que mientras se procesa la solicitud se deja la "pantalla congelada" hasta que termine.
+
+  Asi que lo idoneo y preferible es dejar la ultima opción en TRUE.
+  */
+
+
+
 
 
 
