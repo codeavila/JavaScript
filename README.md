@@ -797,9 +797,8 @@ class Casa {
   */
 
 ```
-
 ># JSON
 >>Con la estructura anterior podemos obtener informacion pero hay que presentar la información que recibimos o enviamos de alguna manera y la mejor forma es utilizando estructura `JSON`.
-**[¿Qué es JSON (Click Aqui)?](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/JSON)**                  .
+**[¿Qué es JSON (Click Aqui)?](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/JSON)**.
 
 
