@@ -1,4 +1,4 @@
-# Mi Manual de JavaScript 
+# Mi Manual de JavaScript (Ajax)
 #### by Dev-EUAB
 
 # Condiciones IF,ELSE,ELSE IF y Operadores Lógicos/Relacionales
@@ -732,23 +732,37 @@ class Casa {
 
 ### Escritura
 ```js
+    //Crear el objeto
+      const xhr = new XMLHttpRequest();
+    //Abrir la conexion
+      xhr.open('tipoDeRequest','URL',true/false);
+    //Una vez que carga lo anterior
+      xhr.onload = function(){
+        if(this.status === 200){
+          document.getElementById('listado').innerHTML = `<h1>${this.responseText}</h1>`;
+        }else if(this.status === 403){
+          document.getElementById('listado').innerHTML = `<h1>No tiene permitido ver el contenido/recurso</h1>`;
+        }else if(this.status === 404){
+          document.getElementById('listado').innerHTML = `<h1>No existe el contenido/recurso</h1>`;
+        }
+      xhr.send();
+  }
+  
   /*Una de las normativas en los ejemplos que uno encuentre en internet de como utilizar AJAX en JavaScript es la declaración del OBJETO < XMLHttpRequest > es declarar el nombre de la variable de la siguiente manera */
 
-  const xhr = new XMLHttpRequest();
-
+    const xhr = new XMLHttpRequest();
+  
   /* XMLHttpRequest es un objeto de JavaScript el cual ya es un estandar de la W3C cuya función es obtener información de una URL sin tener que recargar la pagina completa. */
 
-
-//Abrir la conexión
-
-  xhr.open('tipoDeRequest','URL',true/false);
+  
+    xhr.open('tipoDeRequest','URL',true/false);
 
   /*
   ¿Tipo de Request?
   Le hacemos llamar 'Request' a la acción que vamos a realizar.
   [GET] => Lectura de datos
   [POST] => Envio de datos nuevos
-  [PUT] => Actualuzar dato(s)
+  [PUT] => Actualizar dato(s)
   [DELETE] => Eliminar dato(s)
   */
 
@@ -770,12 +784,22 @@ class Casa {
   Asi que lo idoneo y preferible es dejar la ultima opción en TRUE.
   */
 
+  this.status === "tipo de respuesta"
 
+  /*
+  ¿Status? 
+    Los status son el tipo de respuestas por parte del servidor
 
+    Status => 200 = Correcto
+    Status => 403 = Prohibido
+    Status => 404 = No encontrado
 
-
-
+  */
 
 ```
+
+># JSON
+>>Con la estructura anterior podemos obtener informacion pero hay que presentar la información que recibimos o enviamos de alguna manera y la mejor forma es utilizando estructura `JSON`.
+**[¿Qué es JSON (Click Aqui)?](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/JSON)**                  .
 
 
