@@ -810,17 +810,89 @@ class Casa {
 # JAVA SCRIPT FUNCIONES VARIAS
 
 >## Seleccionar un elemento del DOM
->```js
-> //Buscamos el tipo de objeto del cual queremos obtener su información.
->
-> //Si el objeto tiene una CLASE accederemos a ella por medio del siguiente codigo
->   document.getElementsByClassName('clase');
->
-> //Si el objeto tiene un ID accederemos a ella por medio del siguiente codigo
->   document.getElementById('id');
->
-> //Esos valores que vas a obtener lo puedes guardar para despues utilizarlo 
->   const variable_id = document.getElementById('id');
->   
-> //En caso de que el elemento sea parte de un SELECT MULTIPLE utiliza
->```
+```js
+ //Buscamos el tipo de objeto del cual queremos obtener su información.
+
+ //Si el objeto tiene una CLASE accederemos a ella por medio del siguiente codigo
+   document.getElementsByClassName('clase');
+
+ //Si el objeto tiene un ID accederemos a ella por medio del siguiente codigo
+   document.getElementById('id');
+
+ //Esos valores que vas a obtener lo puedes guardar para despues utilizarlo 
+   const variable_id = document.getElementById('id');
+
+```
+### Ejemplo
+
+>#### HTML
+```html
+<form action="#" id="genero-form">
+  <select id="genero">
+    <option value=''>-- Seleccione --</option>
+    <option value="male">Hombre</option>
+    <option value="female">Mujer</option>
+  </select>
+  <input type="submit" value="Submit">
+</form>
+```
+
+>#### JavaScript
+```js
+  const genero = document.getElementById('genero');
+  const generoSeleccionado = genero.options[genero.selectedIndex].value; 
+```
+
+Con el ejemplo anterior obtendremos el valor que se encuentra en el `value` del `select`. Claro que aun falta un `event` para que uno pueda obtener el valor.
+
+Alguna de las maneras de obtener el valor es utilziar un `event` el cual puede ser ejecutado por varios metodos. En este ejemplo utilizaremos el botón del formulario el `submit`.
+
+```js
+ document.querySelector('#genero').addEventListener('submit',generoSeleccionado);
+
+ //Nota , el querySelector su función es obtener el primer elemento del DOM que tenga el `id` "genero", eso podria ser contraproducente ya que talvez necesitemos algo mas especifico, así que hay ser selectivo.
+
+ function generoSeleccionado(e){
+    e.preventDefault();
+    const genero = document.getElementById('genero');
+    const generoSeleccionado = genero.options[genero.selectedIndex].value;
+    console.log('El gereno seleccionado es : ' + generoSeleccionado);
+ }
+```
+
+### Ejemplo completo
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Document</title>
+</head>
+<body>
+     <h3>Select Multiple JavaScript</h3>
+          <form action="#" id="genero-form">
+          <select id="genero">
+               <option value=''>-- Seleccione --</option>
+               <option value="male">Hombre</option>
+               <option value="female">Mujer</option>
+          </select>     
+          <input type="submit" value="Submit">
+        </form>
+</body>
+
+<script>
+     document.querySelector('#genero-form').addEventListener('submit',generoSeleccionado);
+
+     function generoSeleccionado(e){
+          e.preventDefault();
+          const genero = document.getElementById('genero');
+          const generoSeleccionado = genero.options[genero.selectedIndex].value;
+          console.log('El genero seleccionado es : ' + generoSeleccionado);
+     }
+</script>
+</html>
+
+```
