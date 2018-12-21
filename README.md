@@ -824,8 +824,40 @@ class Casa {
           xhr.send();
      }
 ```
+
+## Ejemplo de una URL y Ajax
+>### HTML
+```html
+   <a href="#" id="cargar">Cargar</a>
+   <div id="listado"></div>
+```
+>### JavaScript
+```js
+  document.getElementById('cargar').addEventListener('click',cargarArray);
+
+     function cargarArray(e){
+          e.preventDefault();
+          const xhr = new XMLHttpRequest();
+          xhr.open('GET','https://uinames.com/api/?maxlen=75',true);
+          xhr.onload = function(){
+               if(this.status === 200){
+                    //console.log(JSON.parse(this.responseText));
+                    //document.getElementById('listado').innerHTML = `${this.responseText}`;
+
+                    this.responseText.foreach(function(result){
+                    document.getElementById('listado').innerHTML += `${result}`;
+                    })
+
+
+               }
+          }
+          xhr.send();
+     }
+```
+
+
 ---
-# JAVA SCRIPT FUNCIONES VARIAS
+# JavaScript  FUNCIONES VARIAS
 
 >## Seleccionar un elemento del DOM
 ```js

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Document</title>
+</head>
+<body>
+
+     <a href="#" id="cargar">Cargar</a>
+     <div id="listado"></div>
+
+<script>
+     document.getElementById('cargar').addEventListener('click',cargarArray);
+
+     function cargarArray(e){
+          e.preventDefault();
+          const xhr = new XMLHttpRequest();
+          xhr.open('GET','https://jsonplaceholder.typicode.com/posts',true);
+          xhr.onload = function(){
+               if(this.status === 200){
+
+                    const results = JSON.parse(this.responseText);
+                    let htmlResult ='';
+                    results.forEach(function(result) {
+                         htmlResult += `
+                         <ul>
+                              <li><h3>userId : ${result.userId}</h3></li>
+                              <li>id : ${result.id}</li>
+                              <li>title : ${result.title}</li>
+                              <li>body : ${result.body}</li>
+                         </ul>
+                         `;
+                    })
+                    document.getElementById('listado').innerHTML = htmlResult;
+               }
+          }
+          xhr.send();
+     }
+</script>
+     
+</body>
+</html>
