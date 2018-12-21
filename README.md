@@ -801,11 +801,29 @@ class Casa {
 >>Con la estructura anterior podemos obtener informacion pero hay que presentar la información que recibimos o enviamos de alguna manera y la mejor forma es utilizando estructura `JSON`.
 **[¿Qué es JSON (Click Aqui)?](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/JSON)**.
 
+## Ejemplo de un array y Ajax
+>### HTML
+```html
+   <a href="#" id="cargar">Cargar</a>
+   <div id="listado"></div>
+```
+>### JavaScript
+```js
+  document.getElementById('cargar').addEventListener('click',cargarArray);
 
-
-
-
-
+     function cargarArray(e){
+          e.preventDefault();
+          const xhr = new XMLHttpRequest();
+          xhr.open('GET','AjaxJSON.txt',true);
+          xhr.onload = function(){
+               if(this.status === 200){
+                    console.log(JSON.parse(this.responseText));
+                    document.getElementById('listado').innerHTML = `${this.responseText}`;
+               }
+          }
+          xhr.send();
+     }
+```
 ---
 # JAVA SCRIPT FUNCIONES VARIAS
 
@@ -842,7 +860,6 @@ class Casa {
 
 ### Ejemplo completo
 ```html
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -869,10 +886,7 @@ class Casa {
      </script>
 </body>
 </html>
-
 ```
-
-
 
 ## Estructura / Explicación - JavaScript Select Multiple
 
@@ -945,5 +959,5 @@ Alguna de las maneras de obtener el valor es utilziar un `event` el cual puede s
      }
 </script>
 </html>
-
 ```
+

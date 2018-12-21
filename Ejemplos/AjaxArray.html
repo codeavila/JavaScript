@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Document</title>
+</head>
+<body>
+
+     <a href="#" id="cargar">Cargar</a>
+     <div id="listado"></div>
+
+<script>
+     document.getElementById('cargar').addEventListener('click',cargarArray);
+
+     function cargarArray(e){
+          e.preventDefault();
+          const xhr = new XMLHttpRequest();
+          xhr.open('GET','AjaxJSON.txt',true);
+          xhr.onload = function(){
+               if(this.status === 200){
+                    console.log(JSON.parse(this.responseText));
+                    document.getElementById('listado').innerHTML = `${this.responseText}`;
+               }
+          }
+          xhr.send();
+     }
+</script>
+     
+</body>
+</html>
