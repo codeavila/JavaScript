@@ -802,3 +802,25 @@ class Casa {
 **[¿Qué es JSON (Click Aqui)?](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/JSON)**.
 
 
+
+
+
+
+---
+# JAVA SCRIPT FUNCIONES VARIAS
+
+>## Seleccionar un elemento del DOM
+>```js
+> //Buscamos el tipo de objeto del cual queremos obtener su información.
+>
+> //Si el objeto tiene una CLASE accederemos a ella por medio del siguiente codigo
+>   document.getElementsByClassName('clase');
+>
+> //Si el objeto tiene un ID accederemos a ella por medio del siguiente codigo
+>   document.getElementById('id');
+>
+> //Esos valores que vas a obtener lo puedes guardar para despues utilizarlo 
+>   const variable_id = document.getElementById('id');
+>   
+> //En caso de que el elemento sea parte de un SELECT MULTIPLE utiliza
+>```
