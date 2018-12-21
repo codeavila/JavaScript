@@ -823,9 +823,60 @@ class Casa {
    const variable_id = document.getElementById('id');
 
 ```
-### Ejemplo
 
->#### HTML
+## Estructura - JavaScript Select Simple
+
+>### HTML
+```html
+  <form action="#" id="form">
+    <input type="number" id="numero">
+    <input type="submit" value="Submit">
+  </form>
+```
+
+>### JavaScript
+```js
+//Ya sabemos "apuntar" al elemento del cual queremos obtener el valor, la forma de obtenerlo es "muy sencilla". 
+  const variable_id = document.getElementById('numero').value;
+```
+
+### Ejemplo completo
+```html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Document</title>
+</head>
+<body>
+     <h3>Select Simple JavaScript</h3>
+     <form action="#" id="form">
+          <input type="text" id="numero">
+          <input type="submit" value="Submit">
+     </form>
+
+     <script>
+          document.querySelector('#form').addEventListener('submit',selectSimple);
+
+          function selectSimple(e){
+          e.preventDefault();
+          const select = document.getElementById('numero').value;
+          console.log('El valor es : ' + select);
+          }
+     </script>
+</body>
+</html>
+
+```
+
+
+
+## Estructura / Explicación - JavaScript Select Multiple
+
+>#### HTML 
 ```html
 <form action="#" id="genero-form">
   <select id="genero">
