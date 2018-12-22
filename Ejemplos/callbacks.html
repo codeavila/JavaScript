@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Document</title>
+</head>
+<body>
+     
+     <h3>CallBacks</h3>
+     <div id="letras"></div>
+</body>
+
+     <script>
+          const letras = ['Aa','Bb','Cc','Dd'];
+          
+          //Inline Callback => Se le llama asi porque la funcion no tiene nombre
+          /*
+          letras.forEach(function(letra){
+               console.log(letra);
+          })
+          */
+
+
+          //
+          /*
+          function callback(letra){
+               console.log(letra);
+          }
+          letras.forEach(callback);
+          */
+
+
+          function nuevaLetra(letra, callback){
+               setTimeout(function(){
+                    letras.push(letra);
+                    callback();
+               },2000);
+          }
+
+          function mostrarLetras(){
+               setTimeout(function(){
+                    let html='';
+                    letras.forEach(function(letra){
+                         html += `<p>${letra}</p>`;
+                    })
+                    document.getElementById('letras').innerHTML = html;
+               },1000);
+              
+          }
+
+          nuevaLetra('Ee',mostrarLetras);
+
+          mostrarLetras();
+     </script>
+</html>
