@@ -855,9 +855,10 @@ class Casa {
      }
 ```
 
+
+---
 ## Async JavaScript
-
-
+  # Tema pendiente
 
 ---
 # JavaScript  FUNCIONES VARIAS
@@ -996,3 +997,35 @@ Alguna de las maneras de obtener el valor es utilziar un `event` el cual puede s
 </html>
 ```
 
+> ## Destructuring
+>> ### Es un codigo el cual te permite extraer varoles de una manera "nueva".
+
+```js
+  /*Forma "vieja" de obtener valores de un objeto*/
+  const cliente = {
+    nombre : 'Eric',
+    profesion : 'Programador'
+  }
+
+  /*Y de esta forma accesabamos a los valores de sus propiedades*/
+  console.log(cliente.nombre);
+  console.log(cliente.profesion);
+
+  /*El ejemplo es sencillo y talvez no tendriamos inconvenientes con acceder a los valores, pero ¿qué sucederia si fueran muchos mas?*/
+```
+
+>> En caso de tener un objeto mas complejo podemos utilizar el *destructuring* para asingar una variable a cada uno de las propiedades del objeto.
+
+```js
+  /* Utilizando el ejemplo anterior procedemos a aplicar el  destructuring */
+  const cliente = {
+    nombre : 'Eric',
+    profesion : 'Programador'
+  }
+
+ ({nombre, profesion}=cliente);
+ /* Observemos, hacemos un tipo "array" donde se asignara cada variable declarada al orden de nuestro objeto al cual hagamos referencia, no importa el nombre de las variables pero si el orden, porque hacemos referencia (mapping) */
+
+ console.log(nombre);
+ console.log(profesion);
+```
