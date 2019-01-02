@@ -1024,8 +1024,56 @@ Alguna de las maneras de obtener el valor es utilziar un `event` el cual puede s
   }
 
  ({nombre, profesion}=cliente);
- /* Observemos, hacemos un tipo "array" donde se asignara cada variable declarada al orden de nuestro objeto al cual hagamos referencia, no importa el nombre de las variables pero si el orden, porque hacemos referencia (mapping) */
+ /* Observemos, hacemos un tipo "objeto" donde se asignara cada variable declarada al orden de nuestro objeto al cual hagamos referencia, no importa el nombre de las variables pero si el orden, porque hacemos referencia (mapping) */
 
  console.log(nombre);
  console.log(profesion);
+```
+
+Ahora bien, pongamos un ejemplo mas "complicado"
+
+```js
+  const ciudadano = {
+    nombre : 'Eric',
+    apellido : 'Avila',
+      info : {
+        estudios : {
+          grado : 'Licenciatura',
+          escuela : 'TEC'
+      },
+      empleo : {
+          estado : 'Guanajuato',
+          tipo : 'programador'
+      }
+    }
+  }
+
+  /*Accedemos a la información y en esta ocasión guardamos en una variable */
+  let {info : {estudios}} = ciudadano;
+  console.log(estudios);
+  console.log(estudios.grado);
+  console.log(estudios.escuela);
+
+  let {info : {empleo}} = ciudadano;
+  console.log(empleo);
+  console.log(empleo.estado);
+  console.log(empleo.tipo);
+  
+```
+
+Tambien podemos dar valores por default.
+
+```js
+  const ciudadano = {
+    nombre : 'Eric',
+    estado : 'Guanajuato'
+  }
+
+let {nombre,estado = 'Sin definir'} = ciudadano;
+
+console.log(nombre);
+console.log(estado);
+
+/* Imprime los resultados y obtendremos los valores que tenemos en el objeto, pero si fuera caso contrario de que no existiera la variable 'estado' esta se agregaria y se le asignaria el valor que se establece en el 'constructuring' */
+
 ```
