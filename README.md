@@ -1081,3 +1081,22 @@ console.log(estado);
 
 ## Arrays
 
+```js
+const animales = ['gato','perro','perico','pez','tortuga'];
+
+/*Cada elemento del Array debe ser mapeado en base a la posición en la que se encuentra*/
+const [primero,segundo] = animales;
+
+console.log(primero);
+console.log(segundo);
+/*En la consola se mostrara 'gato' y 'perro'*/
+
+/*Si necesitaramos un elemento como el 'pez', no es necesario escribir variables hasta llegar a su "posición", podemos declarar el destructuring de la siguiente forma*/
+
+const [,,,pez] = animales;
+
+console.log(pez);
+
+/* de esa forma obtendremos el valor que deseamos, hay que tener en cuenta que no es necesario que el nombre sea igual al del valor, solo es referencial */
+
+```
