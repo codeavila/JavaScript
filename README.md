@@ -1000,6 +1000,7 @@ Alguna de las maneras de obtener el valor es utilziar un `event` el cual puede s
 > ## Destructuring
 >> ### Es un codigo el cual te permite extraer varoles de una manera "nueva".
 
+## Ejemplo en Objetos
 ```js
   /*Forma "vieja" de obtener valores de un objeto*/
   const cliente = {
@@ -1077,3 +1078,6 @@ console.log(estado);
 /* Imprime los resultados y obtendremos los valores que tenemos en el objeto, pero si fuera caso contrario de que no existiera la variable 'estado' esta se agregaria y se le asignaria el valor que se establece en el 'constructuring' */
 
 ```
+
+## Arrays
+
