@@ -1164,7 +1164,12 @@ No Existe = false
 Podemos eliminar un elemento con la propiedad DELETE */
 console.log(carrito.delete('Producto A'));
 
-
+/*TRANSFORMAR LISTA A ARRAY
+Si tenemos la necesidad de transformar nuestra LISTA a un ARRAY utilizaremos el ITERADOR ... , el cual simplifica la transformación.
+*/
+const arrayCarrito = [...carrito];
+console.log(arrayCarrito);
+/* Ya tenemos nuestro array con su respectivo 'key' 'value', podemos ver que al imprimir el array en sus funciones de __proto__ ya cuenta las que le corresponden por ser un array a diferencia de cuando es un SET*/
 
 ```
 
