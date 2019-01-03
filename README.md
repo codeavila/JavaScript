@@ -1,12 +1,39 @@
 # Mi Manual de JavaScript (Ajax)
 #### by Dev-EUAB
 
-# Condiciones IF,ELSE,ELSE IF y Operadores Lógicos/Relacionales
->## IF / ELSE
+# Índice
+1. [Introducción](#intro)
+2. [Condiciones IF,ELSE,ELSE IF y Operadores Lógicos/Relacionales](#condicion)
+    1. [IF/ELSE](#ifelse)
+    2. [Operadores Relacionales](#operadoresrelacionales)
+    3. [Operadores Logicos](#operadoreslogicos)
+    4. [ELSE IF](#elseif)
+    5. [SWITCH](#switch)
+3. [Objetos](#objetos)
+4. [Event Listener](#eventlistener)
+5. [Local Storage](#localstorage)
+    1. [Session Storage](#sessionstorage)
+6. [Prototypes](#prototypes)
+7. [Herencia](#herencia)
+8. [Clases](#clases)
+9. [Ajax](#ajax)
+    1. [JSON](#json)}
+10. [Async](#async)
+11. [JS Funciones](#jsfunciones)
+    1. [Seleccionar elemento del DOM](#selectDOM)
+    2. [Destructuring](#destructuring)
+    3. [Listas Ordenadas](#listas)
+
+
+# <a name="introduction">Introducción</a>
+Some introduction text, formatted in heading 2 style
+
+# <a name="intro">Condiciones IF,ELSE,ELSE IF y Operadores Lógicos/Relacionales</a>
+>## <a name="elseif">IF / ELSE</a>
 >Compara si ambas variables son iguales y nos arroja un mensaje en caso de que sea cierto, y en caso de que no (**else**) arroja un mensaje de que son diferentes.
 
 >Un uso común de las **Condiciones** es para *Comparar* dos o mas variables.
->Para estos casos se utilizan **Los Operadores Relacionales**.
+>Para estos casos se utilizan **<a name="operadoresrelacionales">Los Operadores Relacionales</a>**.
 >
 >Los cuales son:
 
@@ -68,6 +95,7 @@ Sabiendo lo anterior podemos utilizar tambien **Los Operadores Logicos**
 */
 ```
 
+## <a name="operadoreslogicos">Operadores Logicos</a>
 
 ># Operador `&&` "Y" "AND"
 >>>El operador AND menciona que ambos casos deben de ser verdaderos para seguir adelante.
@@ -98,7 +126,7 @@ Sabiendo lo anterior podemos utilizar tambien **Los Operadores Logicos**
   //El mensaje que se mostrara sera -Son diferente, esto es porque la primera parte se cumple varA y varB son iguales, así que pasa a la siguiente comparación la cual no se cumple  varD y varE no son igual sabiendo eso compara ambos resultados esperando 
 ```
 
-># ELSE IF
+># <a name="elseif">ELSE IF</a>
 >Es una condicional extra la cual surge despues e un `IF` siempre y cuando el `IF` sea de resulta `FALSE` se ejecuta la siguiente condicional sin pasar por "si no sucede, esto" , por mencionarlo de otra forma es algo como - "Si no, sucede lo anterior evalua lo siguiente".
 
 ### Ejemplo
@@ -126,7 +154,7 @@ if(varA == varB){
 Si tu intencion es evaluar una variable para retornar "algo" una buena practica es utilizar  SWTICH
 ```
 
-># SWITCH
+># <a name="switch">SWITCH</a>
 >Su función es evaluar una variable en diferentes escenarios ya que pueden poner las diferentes situaciones en las cuales puede ser verdadera y retornar o hacer alguna función especifica.
 
 
@@ -165,7 +193,7 @@ Si tu intencion es evaluar una variable para retornar "algo" una buena practica 
 
 ---
 
-# Objetos
+# <a name="intro">Objetos</a>
 
 ### Ejemplo
 ```js
@@ -229,7 +257,7 @@ const ciudadanoA = new ciudadano('Eric','Avila',28);
 
 >Se crea una variable del tipo de objeto -ciudadano de esta manera la variable tendrá la estructura del objeto y se pueden agregar los atributos que le corresponde, **Hay que respetar los tipo de datos que se declaran dentro del objeto**.
 
-# Event Listener
+# <a name="eventlistener">Event Listener</a>
 
 ## Observación 
 
@@ -299,7 +327,7 @@ function nombre_de_la_función(e){
 
 ---
 
-# Local Storage 
+# <a name="localstorage">Local Storage</a>
 
 Existen dos formar de guardar información una llamada *Local Storage* y *Session Storage*.
 
@@ -321,7 +349,7 @@ localStorage.clear();
 ```
 
 
-## Session Storage
+## <a name="sessionstorage">Session Storage</a>
 
 ### Escritura
 ```
@@ -352,7 +380,7 @@ Mas información
 
 ---
 
-# Prototypes
+# <a name="prototypes">Prototypes</a>
 
 Prototypes son propiedades de un elemento de JavaScript dependiendo del tipo que sean, estas estan predefinidas ó pueden ser creadas por el usuario.
 
@@ -479,7 +507,7 @@ function Familia(numeroDeIntegrantes,mascotas){
   >Ahora que tenemos la `function` en el `__proto__` podemos hacerlo parte de otra función.
 
   
-  ># Herencia
+  ># <a name="herencia">Herencia</a>
   >>Digamos que necesitamos utilizar las variables de nuestra `function` llamada *Casa* en nuestra nueva `function` llamada *Familia*, para esto haremos lo siguiente
 
   ```js
@@ -607,7 +635,7 @@ function Familia(numeroDeIntegrantes,mascotas){
 
 ---
 
-# Clases
+# <a name="clases">Clases</a>
 
 >Para declarar una `Clase` la estructura es de la siguiente manera
 
@@ -724,7 +752,7 @@ class Casa {
 ```
 
 ---
-# JavaScript y AJAX
+# <a name="ajax">JavaScript y AJAX</a>
 
 >Una de las grandes posibilidades de JavaScript o prestaciones es poder utilizar AJAX para el control de información. Veremos como se utiliza de manera nativa ya que en **JQUERY** ya estan los metodos encapsulados para utilizarlos u en otras librerias/frameworks.
 
@@ -797,7 +825,7 @@ class Casa {
   */
 
 ```
-># JSON
+># <a name="json">JSON</a>
 >>Con la estructura anterior podemos obtener informacion pero hay que presentar la información que recibimos o enviamos de alguna manera y la mejor forma es utilizando estructura `JSON`.
 **[¿Qué es JSON (Click Aqui)?](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/JSON)**.
 
@@ -857,13 +885,13 @@ class Casa {
 
 
 ---
-## Async JavaScript
+# <a name="async">Async JavaScript</a>
   # Tema pendiente
 
 ---
-# JavaScript  FUNCIONES VARIAS
+# <a name="jsfunciones">JavaScript  FUNCIONES VARIAS</a>
 
->## Seleccionar un elemento del DOM
+>## <a name="selectDOM">Seleccionar un elemento del DOM</a>
 ```js
  //Buscamos el tipo de objeto del cual queremos obtener su información.
 
@@ -997,7 +1025,7 @@ Alguna de las maneras de obtener el valor es utilziar un `event` el cual puede s
 </html>
 ```
 
-> ## Destructuring
+> ## <a name="destructuring">Destructuring</a>
 >> ### Es un codigo el cual te permite extraer varoles de una manera "nueva".
 
 ## Ejemplo en Objetos
@@ -1128,6 +1156,8 @@ Utilizamos el destructuring para ingresar los valores que le "corresponden" a nu
 ```
 ---
 
+# <a name="listas">LISTAS ORDENADAS SET y MAPS</a>
+
 # SET 
 
 Te permite crear una lista de valores, podria ser como un arregla pero con la gran diferencia que esta no agrega elementos repetidos y que no existen las 'key' o 'index', pero esto ya lo veremos mas adelante.
@@ -1164,13 +1194,25 @@ No Existe = false
 Podemos eliminar un elemento con la propiedad DELETE */
 console.log(carrito.delete('Producto A'));
 
+/* ELIMINAR TODO EL CONTENIDO 
+Eliminar el contenido del SET es facil, utilizaremos la propiedad CLEAR
+*/
+carrito.clear();
+
 /*TRANSFORMAR LISTA A ARRAY
 Si tenemos la necesidad de transformar nuestra LISTA a un ARRAY utilizaremos el ITERADOR ... , el cual simplifica la transformación.
 */
 const arrayCarrito = [...carrito];
 console.log(arrayCarrito);
 /* Ya tenemos nuestro array con su respectivo 'key' 'value', podemos ver que al imprimir el array en sus funciones de __proto__ ya cuenta las que le corresponden por ser un array a diferencia de cuando es un SET*/
-
 ```
 
+# MAPS
 
+```js
+
+let carrito = new Map();
+
+carrito.set('key','value');
+
+```
