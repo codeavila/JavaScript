@@ -1115,7 +1115,7 @@ Declaramos una función la cual es acerca de una mesa de un restaurante, en la c
   }
 
 /*
-Utilizamos el destructuring para ingresar los valores que le "corresponden" a nuestro ejempl.
+Utilizamos el destructuring para ingresar los valores que le "corresponden" a nuestro ejemplo.
 */
   restauranteMesa(
     true,
@@ -1125,8 +1125,47 @@ Utilizamos el destructuring para ingresar los valores que le "corresponden" a nu
       cantidadDeComensales : 5      
     }
   )
+```
+---
 
-  
+# SET 
+
+Te permite crear una lista de valores, podria ser como un arregla pero con la gran diferencia que esta no agrega elementos repetidos y que no existen las 'key' o 'index', pero esto ya lo veremos mas adelante.
+
+```js
+let carrito = new Set();
+carrito.add('Producto A');
+carrito.add('Producto B');
+carrito.add('Producto C');
+carrito.add('Producto D');
+
+console.log(carrito);
+
+/* Observemos que nuestro SET tiene una estructura parecida a una lista, mas que en lugar de utilizar PUSH para agregar utilizamos ADD y en consola se muestra el contenido del SET y si agregamos otro elemento pero repetido, veremos que no lo agregara. */
+carrito.add('Producto A');
+console.log(carrito);
+/* Y como ya lo habiamos dicho, el valor que "agregamos" no se muestra porque ya existe un elemento igual en la lista. */
+
+
+/* TAMAÑO DEL SET */
+/* Para saber el tamaño de nuestro SET se utiliza la propiedad SIZE */
+console.log(carrito.size);
+
+
+/* ¿EXISTE EL ELEMENTO? 
+Podemos comprobar si el valor que buscamos existe un valor en la lista de una manera muy sencilla y elegante */
+console.log(carrito.has('Producto A'));
+/* En la consola nos devolvera un booleano (true/false)
+Existe = true
+No Existe = false
+*/
+
+/* ELIMINAR ELEMENTO 
+Podemos eliminar un elemento con la propiedad DELETE */
+console.log(carrito.delete('Producto A'));
+
+
+
 ```
 
 
