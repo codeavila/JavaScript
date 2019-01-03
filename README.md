@@ -1100,3 +1100,33 @@ console.log(pez);
 /* de esa forma obtendremos el valor que deseamos, hay que tener en cuenta que no es necesario que el nombre sea igual al del valor, solo es referencial */
 
 ```
+
+## Destructuring en **Funciones**
+
+```js
+/*
+Declaramos una función la cual es acerca de una mesa de un restaurante, en la cual obtiene dos parametros, el primero es para verificar que ya se pidio la cuenta y el segundo es la información de la cuenta.
+*/
+  function restauranteMesa(status,informacion){
+    let {metodoDePago,monto,cantidadDeComensales} = informacion;
+      console.log(metodoDePago);
+      console.log(monto);
+      console.log(cantidadDeComensales);
+  }
+
+/*
+Utilizamos el destructuring para ingresar los valores que le "corresponden" a nuestro ejempl.
+*/
+  restauranteMesa(
+    true,
+    {
+      metodoDePago : 'tarjeta',
+      monto : 2340,
+      cantidadDeComensales : 5      
+    }
+  )
+
+  
+```
+
+
