@@ -17,7 +17,7 @@
 7. [Herencia](#herencia)
 8. [Clases](#clases)
 9. [Ajax](#ajax)
-    1. [JSON](#json)}
+    1. [JSON](#json)
 10. [Async](#async)
 11. [JS Funciones](#jsfunciones)
     1. [Seleccionar elemento del DOM](#selectDOM)
@@ -1206,13 +1206,47 @@ const arrayCarrito = [...carrito];
 console.log(arrayCarrito);
 /* Ya tenemos nuestro array con su respectivo 'key' 'value', podemos ver que al imprimir el array en sus funciones de __proto__ ya cuenta las que le corresponden por ser un array a diferencia de cuando es un SET*/
 ```
+Más información [ITERADOR ...](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Operadores/Sintaxis_Spread)
 
 # MAPS
 
 ```js
 
+/*Como sabemos que nuestra variable puede cambiar la declaramos con un LET y le asignamos a nuestra variable el tipo MAP*/
 let carrito = new Map();
 
+/*Al igual que SET hay una manera de agregar elementos y en este caso se utiliza propiedad SET, la diferencia que se tiene que hacer notar y la cual es obligada porque de lo contraria marcara error es que aqui tenemos la libertad de asignar su KEY o INDEX (como gustes entenderlo) y el valor que llevara*/
 carrito.set('key','value');
+carrito.set('electrodomestico','Televisor');
+carrito.set('lineaBlanca','Lavadora');
+
+/*OBTENER EL VALOR DE UNA KEY Ó INDEX
+Se utiliza la propiedad GET y el nombre de la KEY Ó INDEX al que queremos acceder su valor.
+*/
+console.log(carrito.get('electrodomestico'));
+
+/*EL TAMAÑO DEL MAP
+Con la propiedad SIZE podemos saber el numero de elementos que contiene nuestro MAP.
+*/
+console.log(carrito.size);
+
+/*SABER SI EXISTE UN ELEMENTO
+Para saber si existe un elemento utilizamos el KEY ó INDEX y obtendremos una respuesta booleana. Utilizando la propiedad HAS.
+Existe = true
+No existe = false
+*/
+console.log(carrito.has('lineaBlanca'));
+
+/*ELIMINAR UN ELEMENTO
+Se utiliza la propiedad DELETE y el KEY ó INDEX al cual queremos eliminar.
+*/
+carrito.delete('electrodomestico');
+console.log(carrito);
+
+/*ELIMINAR TODO EL CONTENIDO
+Se utiliza la propiedad CLEAR
+*/
+carrito.clear();
+
 
 ```
